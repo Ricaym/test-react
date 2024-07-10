@@ -18,7 +18,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/test_git',
         element:
             <div className="App">
                 <link rel="icon" type="image/png" href={logo}></link>
