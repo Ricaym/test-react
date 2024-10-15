@@ -4,6 +4,7 @@ import Loading from "./components/loading";
 import logo from "./assets/logo.png"
 
 function App() {
+  
   return (
     <div className="App">
       <Home logo={logo}/>
