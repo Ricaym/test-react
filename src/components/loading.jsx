@@ -1,7 +1,21 @@
 import React from "react";
 import "../stylesheets/loading.css";
 
-export default function Loading({}) {
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function Loading() {
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            navigate('/home');
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [navigate]);
+
     return (
         <div>
             <link rel="stylesheet" href="./stylesheets/loading.css"></link>
@@ -147,14 +161,14 @@ export default function Loading({}) {
                 <div className="hex-brick h3" />
                 </div>
                 <div className="gel c29 r3">
-                <div className="hex-brick h1" />
-                <div className="hex-brick h2" />
-                <div className="hex-brick h3" />
+                    <div className="hex-brick h1" />
+                    <div className="hex-brick h2" />
+                    <div className="hex-brick h3" />
                 </div>
                 <div className="gel c30 r3">
-                <div className="hex-brick h1" />
-                <div className="hex-brick h2" />
-                <div className="hex-brick h3" />
+                    <div className="hex-brick h1" />
+                    <div className="hex-brick h2" />
+                    <div className="hex-brick h3" />
                 </div>
                 <div className="gel c31 r3">
                 <div className="hex-brick h1" />
